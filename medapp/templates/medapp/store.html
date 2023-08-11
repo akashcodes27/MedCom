@@ -1,0 +1,71 @@
+{% extends 'medapp/main.html'%}
+{% load static %}
+
+<!-- <img src="{% static 'images/cart.png' %}" alt=""> -->
+
+{% block content %}
+<div class="items-container">
+    {% for product in products %}
+
+    <div class="itemm">
+        <img src="{{ product.ImageURL }}" alt="" height="300px" width="350px" id="productimg">
+        <div class="box-element">
+            <h6><strong>{{product.name}}</strong></h6>
+            <hr>
+        </div>
+        <div class="btn_price_container">
+
+            <div class="card_btn_container">
+                <button class="add_to_btn" data-product-id="{{ product.id }}">Add To Cart</button>
+                <!-- <button id="details_button">Details</button> -->
+            </div>
+            <h4 class="product_price">₹{{product.price}}</h4>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock content %}
+
+    <!-- <div class="itemm">
+        <img src="{% static 'images/product_images/product_card.png' %}" alt="" height="300px" width="350px" id="productimg">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+            <button id="contact_supplier_btn">Contact Supplier</button>
+        </div>
+        <button id="details_button">Details</button>
+    </div>
+    <div class="itemm">
+        <img src="{% static 'images/product_images/product_card.png' %}" alt="" height="300px" width="350px" id="productimg">
+        <div class="box-element product">
+           <h6><strong>Product</strong></h6>
+           <hr>
+           <button id="contact_supplier_btn">Contact Supplier</button>
+        </div>
+        <button id="details_button">Details</button>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- as we can observe we have loaded out static css stylesheet in this html page -->
+<!-- This we could also do by simply linking the css page using relative path -->
+<!-- But we did it using static files -->

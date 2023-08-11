@@ -1,0 +1,156 @@
+{% extends 'medapp/main.html' %}
+{% load static %}
+<!-- remember, the reason why we load static is to access files inside static folder -->
+
+
+{% block content%}
+
+
+<div class="checkout_pg_container">
+
+
+
+    <div class="form-container1">
+        <h2 class="form-title">Shipping Details</h2>
+        <form method="POST" action="{% url 'shipping_address' %}" class="checkout-form">
+            {% csrf_token %}
+           
+
+        
+
+            <div class="name_email_fields" id="checkout-address-box">
+                <div class="input-line" id="checkout-address-field">
+                    <label for="name">Address</label>
+                    <input type="text" name="address" id="checkout_address_field_child" placeholder="Address">
+                </div>
+            </div>
+
+            <div class="name_email_fields">
+
+                <div class="input-line" id="checkout_name_div">
+                    <label for="name">Street</label>
+                    <input type="text" name="street" class="checkout_nm_field" placeholder="Street">
+                </div>
+                <div class="input-line" id="checkout_email_div">
+                    <label for="name">City</label>
+                    <input type="text" name="city" class="checkout_em_field" placeholder="City">
+                </div>
+            </div>
+
+            <div class="name_email_fields">
+
+                <div class="input-line" id="checkout_name_div">
+                    <label for="name">State</label>
+                    <input type="text" name="state" class="checkout_nm_field" placeholder="Your State">
+                </div>
+                <div class="input-line" id="checkout_email_div">
+                    <label for="name">Zipcode</label>
+                    <input type="text" name="zipcode" class="checkout_em_field" placeholder="Your Zipcode">
+                </div>
+            </div>
+
+
+
+            <div id="paypal-button-container"></div>
+            <!-- <input type="submit" value="Place Order"> -->
+        </form>
+    </div>
+
+
+
+    <div class="form-container2">
+        <button class="back-to-cart-button">Back to Cart</button>
+        <h3 class="form-title">Payment Options</h3>
+
+        <!-- <div class="checkout-part-container">
+            <div class="checkout-part">
+                <img src="{% static 'images/product_images/ibuprofen.jpg' %}" alt="" height="110px" widht="160px">
+            </div>
+            <div class="checkout-part">
+                <p>Product 1</p>
+            </div>
+            <div class="checkout-part">
+                <p>$20</p>
+            </div>
+            <div class="checkout-part">
+                x2
+            </div>
+        </div> -->
+
+        <!-- <div class="items-and-total">
+            <p>Items: 2</p>
+            <p>Total: 40$</p>
+        </div> -->
+
+        <div class="payment-container">
+
+            <form action="">
+
+
+                <div class="payment-option" id="paypal-div">
+                    <input type="radio" name="group-name" value="paypall">
+                    <label for="paypall">Paypall Wallet</label>
+                </div>
+
+                <div class="payment-option" id="COD-div">
+                    <input type="radio" name="group-name" value="COD">
+                    <label for="COD">Cash On Delivery</label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+<script src="https://www.paypal.com/sdk/js?client-id=AeIzj_g10Vzq8P6LMyW7dcyjwPxmPkBqlO6HTVu6u5aOlBcft6QV-37mLSL25Om2xZkEwxFN9eFHG6h3&currency=USD"></script>
+
+
+
+<script>
+    // grand_total = order_item.order.get_grand_total()
+    // to setup paypal checkout experience
+    paypal.Buttons({
+
+        style:{
+            color:'blue',
+            shape: 'rect'
+        },
+
+
+
+        createOrder: function(data, actions){
+        return actions.order.create({
+            purchase_units: [{
+                amount:{
+                    value:'{{order.get_grand_total}}' 
+                }
+            }]
+        })
+    },
+
+        // to finalize the transaction 
+        onApprove: function(data, actions){
+            document.querySelector('.checkout-form').submit();
+            return actions.order.capture().then(function(details){
+
+                alert("Transaction Completed By" + details.payer.name.given_name + "!");
+
+            });
+
+        }
+
+
+    }).render("#paypal-button-container");
+
+
+
+
+</script>
+
+
+
+{% endblock content %}

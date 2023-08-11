@@ -1,0 +1,38 @@
+{% extends 'medapp/main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="signup-section">
+
+
+    <div class="signup-container">
+        <h1>Create an Account</h1>
+        <form action="#" method="POST" class="signup-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required  placeholder="Create Your Username">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required  placeholder="Email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required  placeholder="Password">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Conrfirm Password</label>
+                <input type="password" id="conf-password" name="conf-password" required placeholder="Conrfirm Password">
+            </div>
+
+            <button type="submit" class="signup-btn">Create Account</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

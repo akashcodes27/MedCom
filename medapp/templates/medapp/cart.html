@@ -1,0 +1,54 @@
+{% extends 'medapp/main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<section class="cart_section">
+    <div class="cart_container">
+        <button>Continue Shopping</button>
+        <div class="horizontal_cart_container" id="horizontal_cart_container_1">
+            <div class="cart_entity" id="cart_entity_1">Quantity: {{order.get_total_qty}}</div>
+            <div class="cart_entity" id="cart_entity_2">Total: {{order.get_grand_total}}</div>
+            <button class="cart_entity" id="cart_entity_3"><a href="{% url 'checkout' %}">Checkout</a></button>
+        </div>
+    
+        <div class="horizontal_cart_container" id="horizontal_cart_container_2">
+            <div class="cart_entity" id="cart_entity_4">Image</div>
+            <div class="cart_entity" id="cart_entity_5">Item</div>
+            <div class="cart_entity" id="cart_entity_6">Price</div>
+            <div class="cart_entity" id="cart_entity_7">Quantity</div>
+            <div class="cart_entity" id="cart_entity_8">Total</div>
+        </div>
+
+        {% for items in order_items %}
+
+        <div class="horizontal_cart_container" id="horizontal_cart_container_3">
+            <div class="cart_entity" id="cart_prod_img">
+                <img src="{{ items.product.image.url }}" alt="" height="100px" width="100px">
+            </div>
+            <div class="cart_entity" id="cart_product_title">{{items.product.name}}</div>
+            <div class="cart_entity" id="cart_item_price">${{items.product.price}}</div>
+            <div class="cart_entity d-flex" id="cart_amount">
+                <p class="item_amount">{{items.quantity}}</p>
+                <div class="amount_change">
+                    <div class="arrow_up_div" arrow-product-id="{{items.product.id}}">
+                        <a href=""><img src="{% static 'images/main_images/arrow_up.png' %}" alt="" height="30px" width="30px"></a>
+
+                    </div>
+
+                    <div class="arrow_down_div" arrow-product-id="{{items.product.id}}">
+                        <a href=""><img src="{% static 'images/main_images/arrow_down.png' %}" alt="" height="30px" width="30px"></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cart_total" id="cart_total_price">${{items.get_total}}</div>
+        </div>
+
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock content %}

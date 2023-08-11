@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cards_style.css' %}">
+    <!-- The placement of stylesheet is extremely important -->
+    <!-- NOTE: Always place custom stylesheet AFTER bootstrap css, else changes won't reflect -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'main' %}">Sai Ved</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'store' %}">Store</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'store' %}">Antibiotics</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'store' %}">Surgical</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'store' %}">Cardiovascular</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex login_element">
+                    <a href="{% url 'logingout' %}" class="logout_button">Logout</a>
+                    <a href="{% url 'logingin' %}" class="login_button">Login</a>
+                    <a id="cart-icon" href="{% url 'cart' %}">
+                        <img src="{% static 'images/main_images/cart.png' %}" class="cart_image" alt="" width="25px"
+                            height="25px">
+                    </a>
+                    <p id="cart-total">{{cart_tot_default}}</p>
+
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        {% block content %}
+        <!-- Whatever is written withing block and endblock content is exclusive, and wont be inherited -->
+        <p>This is home page block content</p>
+        {% endblock content %}
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/cart.js' %}">
+
+        // function getCookie(name) {
+        //     let cookieValue = null;
+        //     if (document.cookie && document.cookie !== '') {
+        //         const cookies = document.cookie.split(';');
+        //         for (let i = 0; i < cookies.length; i++) {
+        //             const cookie = cookies[i].trim();
+        //             // Check if the cookie name matches the CSRF cookie name
+        //             if (cookie.startsWith(name + '=')) {
+        //                 cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        //                 break;
+        //             }
+        //         }
+        //     }
+        //     return cookieValue;
+        // }
+
+        // function addToCart(productId) {
+        //     const csrfToken = getCookie('csrftoken');
+        //     // Include csrfToken in your AJAX request headers or data
+        //     // ...
+        // }
+
+
+
+    </script>
+</body>
+
+</html>

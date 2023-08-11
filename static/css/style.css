@@ -1,0 +1,578 @@
+#cart-total {
+    color: white;
+}
+
+#cart-icon {
+    color: white;
+}
+
+.bg-dark {
+    background-color: rgb(14, 156, 128) !important;
+}
+
+
+
+.login_button {
+    /* margin-top: 2px; */
+    margin-right: 8px;
+    color: white;
+    text-decoration: none;
+
+}
+.cart_image{
+    margin-bottom: 5px;
+}
+
+.navbar-nav>li {
+    /* This is responsible for adjusting even spacing between navbar elements */
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.login_element {
+    /* This will position login element towards the right side  */
+    position: absolute;
+    right: 15px;
+    margin-top: 8px;
+}
+
+
+.product_price {
+    display: inline-block;
+    color: rebeccapurple
+}
+
+
+.cart_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin-top: 100px;
+}
+
+.horizontal_cart_container {
+    display: flex;
+    align-items: center;
+    /* Align items vertically center */
+    justify-content: space-between;
+    /* Spread flex items evenly */
+    border: 1px solid #ccc;
+    /* Optional: Adding a border for visual clarity */
+    padding: 10px;
+    /* Optional: Add padding for spacing */
+    width: 100%;
+
+}
+
+.cart_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.cart_entity {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black; */
+    flex: 1;
+    /* Distribute available space equally among flex items */
+    text-align: center;
+}
+
+
+#cart_entity_1 {
+    /* margin-right: 180px; */
+
+}
+
+#cart_entity_2 {
+    /* margin-right: 180px; */
+}
+
+#cart_entity_3 {
+    /* margin-right: 180px; */
+
+}
+
+
+#cart_entity_4 {
+    /* margin-right: 155px; */
+    /* margin-left: 100px; */
+
+}
+
+#cart_entity_5 {
+    /* margin-right: 150px; */
+
+
+}
+
+#cart_entity_6 {
+    /* margin-right: 120px; */
+
+}
+
+#cart_entity_7 {
+    /* margin-right: 95px; */
+
+
+}
+
+#cart_entity_8 {
+    /* margin-right: 190px; */
+
+
+
+}
+
+
+#horizontal_cart_container_1 {
+    margin-bottom: 20px;
+
+}
+
+.amount_change {
+    display: block;
+}
+
+.arrow_up_div {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+#cart_product_title {
+    /* margin-right: 120px; */
+
+}
+
+#cart_item_price {
+    /* margin-right: 120px; */
+
+}
+
+#cart_amount {
+    /* margin-right: 120px; */
+
+}
+
+#cart_prod_img {
+    /* margin-right: 120px; */
+
+}
+
+#cart_total_price {
+    /* margin-right: 120px; */
+
+}
+
+
+
+/* ----------checkout form style------------------- */
+
+.checkout_nm_field {
+    width: 100%;
+}
+
+.checkout_em_field {
+    width: 100%;
+}
+
+
+.name_email_fields {
+    display: flex;
+}
+
+#checkout_name_div {
+    margin-right: 105px;
+}
+
+.form-container1 {
+    width: 60%;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+.form-container2 {
+    width: 60%;
+    height: 70%;
+    margin-top: 6rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+
+.form-title {
+    font-size: 36px;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.checkout-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-line {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+}
+
+input[type="text"]::placeholder {
+    font-size: 14px;
+    color: #b9b9b9;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.input-container .input-line {
+    width: 48%;
+}
+
+input[type="button"] {
+    background-color: #e2d709;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    height: 50px;
+    padding: 0 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(4, 88, 167);
+}
+
+
+
+.checkout_pg_container {
+    display: flex;
+    margin-bottom: 180px;
+}
+
+.back-to-cart-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    /* Green color */
+    color: #fff;
+    /* White text color */
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-to-cart-button:hover {
+    background-color: #45a049;
+    /* Dark green color on hover */
+}
+
+
+/* checkout styling for 4 hoeizontal sections containing image product price qty  */
+
+
+.checkout-part-container {
+    display: flex;
+    align-items: center;
+    /* Align items vertically center */
+    justify-content: space-between;
+    /* Spread flex items evenly */
+    border: 1px solid #ccc;
+    /* Optional: Adding a border for visual clarity */
+    padding: 10px;
+    /* Optional: Add padding for spacing */
+    width: 100%;
+}
+
+.checkout-part {
+    flex: 1;
+    /* Distribute available space equally among flex items */
+    text-align: center;
+    /* Center the content horizontally */
+}
+
+.checkout-part img {
+    display: block;
+    /* Remove default image spacing */
+    margin: 0 auto;
+    /* Center the image within the flex item */
+}
+
+.items-and-total p {
+    font-size: 1.5rem;
+}
+
+
+
+/* email address css for checkout */
+#checkout-email-box {
+    width: 98%
+}
+
+#checkout-address-box {
+    width: 98%
+}
+
+
+
+/*----------- Checkout payment---------------------- */
+
+
+.payment-option {
+    height: 60px;
+    /* border: 1px solid; */
+    padding: 20px;
+    margin-bottom: 20px;
+
+    /* Apply the shadow effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 550px;
+}
+
+
+.confirm-pay-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:100px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* --------fixed div at bottom css----------------- */
+.place-order-btn2{
+    display: inline-block;
+    background-color: #6530ba;
+    /* Green color */
+    color: #fff;
+    /* White text color */
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.place-order-btn2 a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+
+.confirm-pay-container{
+    display: flex;
+}
+
+/* ----------checkout form style ends------------------- */
+
+
+
+/* ------------signup css----------------------------------------- */
+
+.signup-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:70px;
+}
+.signup-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007BFF;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.signup-btn {
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+
+/* login css--------------------------------------------------------------------- */
+.login-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:70px;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007BFF;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.login-btn {
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* The purpose of having a main.css file is to write css code applicable globally to the entire website and not to any specific component, for example, in this case the background is set to blue, is a css style that is applicable to all the pages of the application , blue over here is just an example */
+
+
+/* When you write static file code, make sure to configure the code inside the settings  */
